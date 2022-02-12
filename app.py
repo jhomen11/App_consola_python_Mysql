@@ -1,14 +1,17 @@
+from usuarios import acciones
+
 print("""
 Acciones Disponibles, Selecciona una opcion:
     1 - Registrarse
     2 - Login
 """)
 
+acc = acciones.Acciones()
+
 accion = input("¿Qué acción desea hacer? ")
 if accion == '1':
-    print('\nPor favor ingresa los datos:')
+    acc.registro()
 
-    nombre = input('Ingresa tu nombre: ')
-    apellido = input('Ingresa tu apellido: ')
-    email = input('Ingresa tu email: ')
-    password = input('Ingresa tu contraseña: ')
+else:
+    acc.login()
+    
