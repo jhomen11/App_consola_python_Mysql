@@ -4,7 +4,7 @@ class Acciones:
         print('\nPor favor ingresa los datos:')
 
         nombre = input('Ingresa tu nombre: ')
-        apellido = input('Ingresa tu apellido: ')
+        apellidos = input('Ingresa tus apellidos: ')
         email = input('Ingresa tu email: ')
         password = input('Ingresa tu contraseña: ')
 
