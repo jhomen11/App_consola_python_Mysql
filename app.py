@@ -8,10 +8,9 @@ Acciones Disponibles, Selecciona una opcion:
 
 acc = acciones.Acciones()
 
-accion = input("¿Qué acción desea hacer? ")
+accion = input("¿Qué Acción desea hacer? ")
 if accion == '1':
     acc.registro()
-
 else:
     acc.login()
     
