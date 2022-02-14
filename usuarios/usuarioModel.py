@@ -36,12 +36,13 @@ class Usuario:
         try:
             cursor.execute(sql, usuario)
             db.commit()
+
+            #Guardamos en una lista con la cantidad de registros que se halla modificado
+            #y el objeto
             result = [cursor.rowcount, self]
         except:
             result = [0, self]
 
-        #Retornamos una lista con la cantidad de registros que se halla modificado
-        #y el objeto
         return result
 
 
