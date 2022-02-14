@@ -1,6 +1,7 @@
 from unittest import result
 import mysql.connector
 import datetime
+import hashlib
 
 db = mysql.connector.connect(
     host = "localhost",
@@ -24,10 +25,13 @@ class Usuario:
     
     def registrar(self):
 
+        #cifrado  de contraseña
+        passCifrada = hashlib.sha256()
+        passCifrada.update(self.password.encode('utf8'))
         fecha = datetime.datetime.now()
 
         sql = "INSERT INTO usuarios VALUES (null,%s, %s, %s, %s, %s)"
-        usuario = (self.nombre, self.apellidos, self.email, self.password, fecha)
+        usuario = (self.nombre, self.apellidos, self.email, passCifrada.hexdigest(), fecha)
 
         try:
             cursor.execute(sql, usuario)
