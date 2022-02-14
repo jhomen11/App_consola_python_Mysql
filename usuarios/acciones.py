@@ -17,7 +17,7 @@ class Acciones:
         if registro[0] >= 1:
             print(f"Usuario registrado correctamente")
         else:
-            print(f"Registro Fallido")
+            print(f"Registro Fallido, el correo ingresado ya existe")
 
     def login(self):
         print('\nIngresa tus datos para iniciar sesión')
